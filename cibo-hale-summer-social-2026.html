@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interior Girls Club Summer Social Photos | Cibo Hale</title>
+<meta name="description" content="View and download photographs from the Interior Girls Club Summer Social at Cibo Hale, bringing together leading interior designers from across the North.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F7F3EE;
+  --warm-white: #FDFAF7;
+  --charcoal: #1A1A18;
+  --taupe: #B8A99A;
+  --blush: #D4B8A8;
+  --gold: #C9A96E;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--charcoal); font-family: 'DM Sans', sans-serif; font-weight: 300; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 10px 48px; background: #fff; border-bottom: 1px solid rgba(184,169,154,0.2); }
+.nav-logo { text-decoration: none; }
+.logo-lockup { display: flex; flex-direction: column; line-height: 1; }
+.logo-top, .logo-bot { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 20px; letter-spacing: 0.12em; color: var(--charcoal); }
+.logo-mid { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--taupe); margin: -2px 0; }
+
+/* BURGER */
+.burger { display: flex; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 200; }
+.burger span { display: block; width: 28px; height: 1.5px; background: var(--charcoal); transition: all 0.3s; }
+.burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+/* MOBILE MENU */
+.mobile-menu { position: fixed; top: 0; right: -100%; width: min(360px,100vw); height: 100vh; background: #fff; z-index: 150; display: flex; flex-direction: column; justify-content: center; padding: 60px 48px; transition: right 0.4s cubic-bezier(0.76,0,0.24,1); box-shadow: -20px 0 60px rgba(0,0,0,0.08); }
+.mobile-menu.open { right: 0; }
+.menu-close { position: absolute; top: 24px; right: 28px; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--charcoal); }
+.mobile-menu ul { list-style: none; }
+.mobile-menu ul li { border-bottom: 1px solid rgba(184,169,154,0.2); }
+.mobile-menu ul li a { display: block; padding: 20px 0; font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--charcoal); text-decoration: none; }
+.mobile-menu ul li a:hover { color: var(--taupe); }
+.menu-cta { color: var(--taupe) !important; font-style: italic; }
+.menu-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 140; opacity: 0; pointer-events: none; transition: opacity 0.4s; }
+.menu-overlay.open { opacity: 1; pointer-events: all; }
+
+/* BUTTONS */
+.btn-white { display: inline-block; background: #fff; color: var(--charcoal); padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: background 0.3s; }
+.btn-white:hover { background: var(--gold); }
+.btn-outline-white { display: inline-block; background: transparent; color: rgba(255,255,255,0.85); padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(255,255,255,0.4); transition: all 0.3s; }
+.btn-outline-white:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.btn-dark { display: inline-block; background: var(--charcoal); color: #fff; padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: background 0.3s; }
+.btn-dark:hover { background: var(--taupe); }
+.btn-outline { display: inline-block; background: transparent; color: var(--charcoal); padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--charcoal); transition: all 0.3s; }
+.btn-outline:hover { background: var(--charcoal); color: #fff; }
+
+/* HERO */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background-color: var(--charcoal); background-image: url('img/hero-bg.jpg'); background-size: cover; background-position: center; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,26,24,0.92) 0%, rgba(26,26,24,0.4) 50%, rgba(26,26,24,0.15) 100%); }
+.hero-content { position: relative; z-index: 2; width: 100%; padding: 80px 64px; }
+.hero-eyebrow { display: block; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(56px,9vw,120px); line-height: 0.95; color: #fff; letter-spacing: -0.02em; margin-bottom: 10px; }
+.hero-title em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; color: var(--taupe); }
+.hero-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: rgba(255,255,255,0.6); margin-bottom: 28px; }
+.hero-intro { max-width: 520px; font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.75); margin-bottom: 36px; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* IMAGE STRIP */
+.image-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.image-strip img { width: 100%; height: 400px; object-fit: cover; display: block; }
+
+/* GALLERY PLACEHOLDER */
+.gallery-placeholder { padding: 100px 64px; text-align: center; background: var(--warm-white); }
+.section-label { display: block; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--taupe); margin-bottom: 20px; }
+.section-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(32px,5vw,56px); line-height: 1.05; color: var(--charcoal); }
+.section-title em { font-style: italic; font-weight: 400; color: var(--taupe); }
+.gallery-placeholder p { margin-top: 12px; font-size: 14px; color: var(--taupe); letter-spacing: 0.06em; }
+
+/* DOWNLOAD */
+.download-section { background: var(--charcoal); padding: 100px 64px; }
+.download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 48px; }
+.download-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 48px 40px; }
+.card-eyebrow { display: block; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.download-card h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 14px; }
+.download-card p { font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.65); margin-bottom: 32px; }
+
+/* USAGE */
+.usage { padding: 80px 64px; max-width: 760px; margin: 0 auto; text-align: center; }
+.usage-body { font-size: 15px; line-height: 1.85; color: #6B6760; margin-top: 20px; }
+.usage-body p + p { margin-top: 14px; }
+.usage-body a { color: var(--charcoal); border-bottom: 1px solid var(--taupe); text-decoration: none; }
+
+/* PARTNER */
+.partner { background: var(--warm-white); border-top: 1px solid rgba(184,169,154,0.2); border-bottom: 1px solid rgba(184,169,154,0.2); padding: 80px 64px; }
+.partner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 1100px; margin: 0 auto; }
+.partner-img { width: 100%; height: 320px; object-fit: cover; display: block; }
+.partner-label { display: block; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--taupe); margin-bottom: 12px; }
+.partner-name { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--charcoal); margin-bottom: 20px; }
+.partner-text { font-size: 14px; line-height: 1.85; color: #6B6760; margin-bottom: 14px; }
+
+/* CTA */
+.igc-cta { padding: 120px 64px; text-align: center; background: var(--cream); }
+.igc-cta-inner { max-width: 680px; margin: 0 auto; }
+.igc-cta p { font-size: 16px; line-height: 1.85; color: #6B6760; margin: 20px 0 40px; }
+.igc-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* FOOTER */
+footer { background: #111110; padding: 60px 64px 36px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 28px; }
+.f-logo { display: flex; flex-direction: column; line-height: 1; margin-bottom: 16px; }
+.fi, .fc { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 20px; letter-spacing: 0.12em; color: #fff; }
+.fg { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--taupe); margin: -2px 0; }
+.f-tagline { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 20px; }
+.f-social { display: flex; gap: 10px; }
+.f-social a { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.3s; }
+.f-social a:hover { border-color: var(--gold); color: var(--gold); }
+.f-col h4 { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--taupe); margin-bottom: 18px; }
+.f-col ul { list-style: none; }
+.f-col ul li + li { margin-top: 10px; }
+.f-col ul li a { text-decoration: none; color: rgba(255,255,255,0.7); font-size: 13px; transition: color 0.3s; }
+.f-col ul li a:hover { color: #fff; }
+.f-bottom { display: flex; justify-content: space-between; align-items: center; }
+.f-copy { font-size: 11px; color: rgba(255,255,255,0.4); }
+.f-domain { font-size: 11px; color: var(--taupe); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 10px 20px; }
+  .hero-content { padding: 60px 24px; }
+  .image-strip img { height: 240px; }
+  .gallery-placeholder { padding: 60px 24px; }
+  .download-section { padding: 60px 24px; }
+  .download-grid { grid-template-columns: 1fr; }
+  .usage { padding: 60px 24px; }
+  .partner { padding: 60px 24px; }
+  .partner-grid { grid-template-columns: 1fr; gap: 32px; }
+  .partner-img { height: 220px; }
+  .igc-cta { padding: 80px 24px; }
+  footer { padding: 48px 24px 28px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .f-bottom { flex-direction: column; gap: 10px; text-align: center; }
+}
+@media (max-width: 480px) {
+  .image-strip { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition-duration: 0.01ms !important; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="logo-lockup">
+      <span class="logo-top">INTERIOR</span>
+      <span class="logo-mid">girls</span>
+      <span class="logo-bot">CLUB</span>
+    </div>
+  </a>
+  <button class="burger" aria-label="Open menu" onclick="var m=document.getElementById('mm');var o=document.getElementById('mo');this.classList.toggle('open');m.classList.toggle('open');o.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mobile-menu" id="mm">
+    <button class="menu-close" onclick="document.getElementById('mm').classList.remove('open');document.getElementById('mo').classList.remove('open');document.querySelector('.burger').classList.remove('open');document.body.style.overflow='';">&#x2715;</button>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#events">Events</a></li>
+      <li><a href="/#founders">Founders</a></li>
+      <li><a href="/#podcast">Podcast</a></li>
+      <li><a href="https://www.instagram.com/interiorgirlsclub?igsh=YjhkdmhuNm9xNGUx" target="_blank">Instagram</a></li>
+      <li><a href="/#directory" class="menu-cta">Join the Club</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="menu-overlay" id="mo" onclick="document.getElementById('mm').classList.remove('open');this.classList.remove('open');document.querySelector('.burger').classList.remove('open');document.body.style.overflow='';"></div>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Interior Girls Club &middot; Event Photography</span>
+    <h1 class="hero-title">Summer<br><em>Social</em></h1>
+    <p class="hero-sub">Cibo Hale &nbsp;&middot;&nbsp; 29 July 2026</p>
+    <p class="hero-intro">Relive the conversations, connections and moments from the Interior Girls Club Summer Social at Cibo Hale. Browse the gallery below or download photographs for your website and social channels.</p>
+    <div class="hero-btns">
+      <a href="#gallery" class="btn-white">View the photographs</a>
+      <a href="#download" class="btn-outline-white">Download the full gallery</a>
+    </div>
+  </div>
+</section>
+
+<div class="image-strip">
+  <img src="img/hero-img1.jpg" alt="Interior Girls Club Summer Social at Cibo Hale">
+  <img src="img/hero-img2.jpg" alt="Interior Girls Club Summer Social — networking and conversations">
+</div>
+
+<section class="gallery-placeholder" id="gallery">
+  <span class="section-label">Gallery</span>
+  <h2 class="section-title">Photographs <em>updated</em><br>post event</h2>
+  <p>Check back after 29 July 2026</p>
+</section>
+
+<section class="download-section" id="download">
+  <span class="section-label" style="color:var(--gold);">Take them with you</span>
+  <h2 class="section-title" style="color:#fff;">Download the <em style="color:var(--taupe);">photographs</em></h2>
+  <div class="download-grid">
+    <div class="download-card">
+      <span class="card-eyebrow">Social &amp; digital</span>
+      <h3>Social and website images</h3>
+      <p>Optimised files suitable for Instagram, LinkedIn, websites and digital sharing. Ready to use straight from your download folder.</p>
+      <a href="#" class="btn-outline-white">Download social images</a><!-- REPLACE # with Dropbox link -->
+    </div>
+    <div class="download-card">
+      <span class="card-eyebrow">Print &amp; editorial</span>
+      <h3>High-resolution images</h3>
+      <p>Full-size files suitable for print, editorial use and professional marketing. Large files — best downloaded on a desktop connection.</p>
+      <a href="#" class="btn-outline-white">Download high-resolution images</a><!-- REPLACE # with Dropbox link -->
+    </div>
+  </div>
+</section>
+
+<section class="usage">
+  <span class="section-label">Using these photographs</span>
+  <h2 class="section-title">How you can <em>use them</em></h2>
+  <div class="usage-body">
+    <p>Event attendees are welcome to use these photographs across their websites and social channels. Where possible, please credit <a href="https://www.instagram.com/interiorgirlsclub?igsh=YjhkdmhuNm9xNGUx" target="_blank" rel="noopener">@interiorgirlsclub</a> and <a href="https://www.instagram.com/inspire_avsmarthome" target="_blank" rel="noopener">@inspire_avsmarthome</a>.</p>
+    <p>If you would like a photograph removed from the gallery, please contact the team at <a href="mailto:hello@interiorgirls.club">hello@interiorgirls.club</a>.</p>
+  </div>
+</section>
+
+<section class="partner">
+  <div class="partner-grid">
+    <img src="img/inspire-project.jpg" alt="Inspire AV — luxury home cinema and integrated smart home project" class="partner-img">
+    <div>
+      <span class="partner-label">Event support</span>
+      <h2 class="partner-name">Inspire AV</h2>
+      <p class="partner-text">Photography, PA and technical support for the Summer Social were provided by Inspire AV.</p>
+      <p class="partner-text">Inspire works alongside interior designers, architects and homeowners to deliver discreet smart-home technology, lighting design, home cinema and integrated AV throughout Cheshire, Yorkshire and London.</p>
+      <p class="partner-text">For selected collaborative projects, Inspire can also help design partners capture completed spaces through photography, video and shared case studies.</p>
+      <a href="https://inspire-av.com/interior-designers/" target="_blank" rel="noopener noreferrer" class="btn-outline">Discover how Inspire works with interior designers</a>
+    </div>
+  </div>
+</section>
+
+<section class="igc-cta">
+  <div class="igc-cta-inner">
+    <span class="section-label">Interior Girls Club</span>
+    <h2 class="section-title">Be part of the <em>next event</em></h2>
+    <p>Interior Girls Club brings together designers, architects, stylists, suppliers and creative professionals through events, conversations and genuine industry connections.</p>
+    <div class="igc-cta-btns">
+      <a href="/#directory" class="btn-dark">Join Interior Girls Club</a>
+      <a href="/#events" class="btn-outline">View upcoming events</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo">
+        <span class="fi">INTERIOR</span>
+        <span class="fg">girls</span>
+        <span class="fc">CLUB</span>
+      </div>
+      <p class="f-tagline">An open community for everyone in the interior design industry.</p>
+      <div class="f-social">
+        <a href="https://www.instagram.com/interiorgirlsclub?igsh=YjhkdmhuNm9xNGUx" target="_blank" rel="noopener" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#events">Events</a></li>
+        <li><a href="/#founders">Founders</a></li>
+        <li><a href="/#podcast">Podcast</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="/#directory">Join the Club</a></li>
+        <li><a href="https://www.eventbrite.com/e/interior-girls-club-summer-social-tickets-1992449221256" target="_blank" rel="noopener">Summer Social Tickets</a></li>
+        <li><a href="https://www.instagram.com/interiorgirlsclub?igsh=YjhkdmhuNm9xNGUx" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@interiorgirls.club">hello@interiorgirls.club</a></li>
+        <li><a href="https://www.instagram.com/interiorgirlsclub?igsh=YjhkdmhuNm9xNGUx" target="_blank" rel="noopener">@interiorgirlsclub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span class="f-copy">&copy; 2026 Interior Girls Club. All rights reserved.</span>
+    <span class="f-domain">interiorgirls.club</span>
+  </div>
+</footer>
+
+</body>
+</html>
