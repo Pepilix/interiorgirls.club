@@ -18,7 +18,7 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { background: var(--cream); color: var(--charcoal); font-family: 'DM Sans', sans-serif; font-weight: 300; overflow-x: hidden; }
+body { background: var(--cream); color: var(--charcoal); font-family: 'DM Sans', sans-serif; font-weight: 300; overflow-x: hidden; overflow-y: auto; }
 
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 10px 48px; background: #fff; border-bottom: 1px solid rgba(184,169,154,0.2); }
@@ -57,7 +57,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; j
 .btn-outline:hover { background: var(--charcoal); color: #fff; }
 
 /* HERO */
-.hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; overflow: hidden; }
+.hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; }
 .hero-bg { position: absolute; inset: 0; background-color: var(--charcoal); background-image: url('img/hero-bg.jpg'); background-size: cover; background-position: center; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,26,24,0.92) 0%, rgba(26,26,24,0.4) 50%, rgba(26,26,24,0.15) 100%); }
 .hero-content { position: relative; z-index: 2; width: 100%; padding: 80px 64px; }
@@ -153,7 +153,7 @@ footer { background: #111110; padding: 60px 64px 36px; }
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">
+  <a href="https://interiorgirls.club/" class="nav-logo">
     <div class="logo-lockup">
       <span class="logo-top">INTERIOR</span>
       <span class="logo-mid">girls</span>
@@ -166,13 +166,13 @@ footer { background: #111110; padding: 60px 64px 36px; }
   <div class="mobile-menu" id="mm">
     <button class="menu-close" onclick="document.getElementById('mm').classList.remove('open');document.getElementById('mo').classList.remove('open');document.querySelector('.burger').classList.remove('open');document.body.style.overflow='';">&#x2715;</button>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/#about">About</a></li>
-      <li><a href="/#events">Events</a></li>
-      <li><a href="/#founders">Founders</a></li>
-      <li><a href="/#podcast">Podcast</a></li>
+      <li><a href="https://interiorgirls.club/">Home</a></li>
+      <li><a href="https://interiorgirls.club/#about">About</a></li>
+      <li><a href="https://interiorgirls.club/#events">Events</a></li>
+      <li><a href="https://interiorgirls.club/#founders">Founders</a></li>
+      <li><a href="https://interiorgirls.club/#podcast">Podcast</a></li>
       <li><a href="https://www.instagram.com/interiorgirlsclub?igsh=YjhkdmhuNm9xNGUx" target="_blank">Instagram</a></li>
-      <li><a href="/#directory" class="menu-cta">Join the Club</a></li>
+      <li><a href="https://interiorgirls.club/#directory" class="menu-cta">Join the Club</a></li>
     </ul>
   </div>
 </nav>
@@ -253,8 +253,8 @@ footer { background: #111110; padding: 60px 64px 36px; }
     <h2 class="section-title">Be part of the <em>next event</em></h2>
     <p>Interior Girls Club brings together designers, architects, stylists, suppliers and creative professionals through events, conversations and genuine industry connections.</p>
     <div class="igc-cta-btns">
-      <a href="/#directory" class="btn-dark">Join Interior Girls Club</a>
-      <a href="/#events" class="btn-outline">View upcoming events</a>
+      <a href="https://interiorgirls.club/#directory" class="btn-dark">Join Interior Girls Club</a>
+      <a href="https://interiorgirls.club/#events" class="btn-outline">View upcoming events</a>
     </div>
   </div>
 </section>
@@ -277,16 +277,16 @@ footer { background: #111110; padding: 60px 64px 36px; }
     <div class="f-col">
       <h4>Explore</h4>
       <ul>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#events">Events</a></li>
-        <li><a href="/#founders">Founders</a></li>
-        <li><a href="/#podcast">Podcast</a></li>
+        <li><a href="https://interiorgirls.club/#about">About</a></li>
+        <li><a href="https://interiorgirls.club/#events">Events</a></li>
+        <li><a href="https://interiorgirls.club/#founders">Founders</a></li>
+        <li><a href="https://interiorgirls.club/#podcast">Podcast</a></li>
       </ul>
     </div>
     <div class="f-col">
       <h4>Community</h4>
       <ul>
-        <li><a href="/#directory">Join the Club</a></li>
+        <li><a href="https://interiorgirls.club/#directory">Join the Club</a></li>
         <li><a href="https://www.eventbrite.com/e/interior-girls-club-summer-social-tickets-1992449221256" target="_blank" rel="noopener">Summer Social Tickets</a></li>
         <li><a href="https://www.instagram.com/interiorgirlsclub?igsh=YjhkdmhuNm9xNGUx" target="_blank" rel="noopener">Instagram</a></li>
       </ul>
@@ -295,15 +295,4 @@ footer { background: #111110; padding: 60px 64px 36px; }
       <h4>Contact</h4>
       <ul>
         <li><a href="mailto:hello@interiorgirls.club">hello@interiorgirls.club</a></li>
-        <li><a href="https://www.instagram.com/interiorgirlsclub?igsh=YjhkdmhuNm9xNGUx" target="_blank" rel="noopener">@interiorgirlsclub</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="f-bottom">
-    <span class="f-copy">&copy; 2026 Interior Girls Club. All rights reserved.</span>
-    <span class="f-domain">interiorgirls.club</span>
-  </div>
-</footer>
-
-</body>
-</html>
+        <li><a 
